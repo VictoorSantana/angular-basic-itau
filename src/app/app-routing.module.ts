@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+const routes: Routes = [  
   {
-      path: '',      
-      loadChildren: () => import('./empresa/empresa.module').then(m => m.EmpresaModule),
+    path: '',
+    // redirectTo: 'polos',
+    loadChildren: () => import('./empresa/empresa.module').then(m => m.EmpresaModule),
   }
 ];
 
