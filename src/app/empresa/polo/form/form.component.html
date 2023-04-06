@@ -1,0 +1,91 @@
+<app-header></app-header>
+
+
+
+<div class="container mb-5" *ngIf="polo">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <h4 class="mb-1">Polos {{polo.name}}</h4>
+                <p class="text-secondary">Exibindo detalhes do polo  {{polo.name}}#{{polo.id}}</p>
+            </div>
+        </div>
+    </div>
+    <form class="row mb-5" [formGroup]="formAddress">
+        <div class="col-md-12">
+            <small class="text-secondary">Detalhes do Endereço</small>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="CEP" formControlName="zip" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="fom-group">
+                <input type="text" placeholder="Nome da Rua" formControlName="street" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="Bairro" formControlName="neighborhood" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="Estado" formControlName="state" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="Cidade" formControlName="city" class="form-control">
+            </div>
+        </div>
+    </form>
+
+    <div class="row mb-4" [formGroup]="formCompany">
+        <div class="col-md-12">
+            <small class="text-secondary">Detalhes do Empresa</small>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="Nome" formControlName="name" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fom-group">
+                <input type="text" placeholder="Business" formControlName="business" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <input type="text" placeholder="Valuation" formControlName="valuation" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="fom-group">
+                <input type="text" placeholder="CNPJ" formControlName="cnpj" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="fom-group">
+                <select class="form-control" formControlName="status">
+                    <option value="">Status</option>
+                    <option [value]="true">Ativo</option>
+                    <option [value]="false">Desativado</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex" style="gap: 1rem">
+        <button type="button" 
+        [routerLink]="['/polos']"
+        style="width: 120px;"
+        class="btn btn-secondary">Voltar</button>
+
+        <button type="button" 
+        style="width: 120px;"
+        class="btn btn-primary" disabled>Salvar</button>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <h4 class="mb-1">Polos Itaú</h4>
+                <p class="text-secondary">Confira abaixo alguns dos principais polos do Itaú</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="shadow bg-white p-0 p-sm-4 table-responsive">
+                <table class="table-mat w-100">
+                    <thead>
+                        <tr>
+                            <th class="text-secondary small">Nome</th>
+                            <th class="text-secondary small">Business</th>
+                            <th class="text-secondary small">Valuation</th>
+                            <th class="text-secondary small text-center">Situação</th>
+                            <th class="text-secondary small">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of polos" class="cursor-default">
+                            <td><b> {{item.name}} </b></td>
+                            <td>{{item.business}}</td>
+                            <td>{{item.valuation | moneyBr}}</td>
+                            <td class="text-center">
+                                <span [ngClass]="{'polo-active': item.active, 'polo-disabled': !item.active}"></span>
+                            </td>
+                            <td>
+                                
+                                <button class="btn btn-link text-dark"
+                                [routerLink]="['/polos', item.id]"
+                                >
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

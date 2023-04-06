@@ -1,0 +1,19 @@
+@import '../../../variables.scss';
+
+.polo {
+    &-active {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: $success;
+        border-radius: 100%;
+    }
+
+    &-disabled {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: $danger;
+        border-radius: 100%;
+    }
+}
