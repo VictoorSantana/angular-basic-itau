@@ -5,6 +5,11 @@ import { FormComponent } from './polo/form/form.component';
 
 const routes: Routes = [
     {
+        path: '',
+        redirectTo: 'polos',
+        
+    },
+    {
         path: 'polos', component: PoloComponent,
     },
     {

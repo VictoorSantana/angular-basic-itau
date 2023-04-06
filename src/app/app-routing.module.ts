@@ -5,8 +5,7 @@ import { PoloComponent } from './empresa/polo/polo.component';
 
 const routes: Routes = [
   {
-      path: '',
-      // redirectTo: '/polos',
+      path: '',      
       loadChildren: () => import('./empresa/empresa.module').then(m => m.EmpresaModule),
   }
 ];
